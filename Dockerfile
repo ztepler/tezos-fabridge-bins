@@ -2,7 +2,7 @@ FROM alpine:latest as builder
 ARG REPO="https://gitlab.com/tezos/tezos.git"
 ARG BRANCH="latest-release"
 RUN apk update && apk add --no-cache \
-    bash git m4 build-base patch unzip wget opam jq bc bubblewrap autoconf cmake libev-dev libffi-dev gmp-dev hidapi-dev protobuf-dev sqlite-dev zlib-dev
+    bash git m4 build-base patch unzip wget opam jq bc bubblewrap autoconf cmake libev-dev libffi-dev gmp-dev hidapi-dev protobuf protobuf-dev sqlite-dev zlib-dev
 
 RUN adduser -D builduser
 USER builduser
